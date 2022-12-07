@@ -12,24 +12,16 @@ void Merge(ElemType *A,int low,int mid,int high){
     k=low;
     for(i=low,j=mid+1;i<=mid&&j<=high;){
         if(B[i]<B[j]){
-            A[k]=B[i];
-            ++k;
-            ++i;
+            A[k++]=B[i++];
         }else{
-            A[k]=B[j];
-            ++k;
-            ++j;
+            A[k++]=B[j++];
         }
     }
     while(i<=mid){
-        A[k]=B[i];
-        k++;
-        i++;
+       A[k++]=B[i++];
     }
     while(k<=high){
-        A[k]=B[j];
-        k++;
-        j++;
+       A[k++]=B[j++];
     }
 }
 
